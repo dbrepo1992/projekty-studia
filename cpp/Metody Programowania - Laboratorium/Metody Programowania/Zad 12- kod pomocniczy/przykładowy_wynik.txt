@@ -1,0 +1,55 @@
+abc@abc:~/METODY_PROGRAMOWANIA/PRZYKŁADY/zad12$ ./compile_and_run.sh 
+
+*** 1 (  ./zad12.out lib_02.so  )
+
+Hello dynamically linked World.
+
+*** 2 (  ./zad12.out lib_03.so  )
+
+Witaj w świecie dynamicznych bibliotek.
+
+---------------
+5
+3.14
+ma
+kota
+*****
+
+---udało się---
+
+*** 3 (  ./zad12.out lib_04.so  )
+Losowanie kotów - kończy się po wylosowaniu wartości
+dolnej granicy przedziału - domyślnie ustawianej na 1
+
+----- A -----
+Ala ma 9 kotów.
+Ala ma 7 kotów.
+Ala ma 2 koty.
+Ala ma 2 koty.
+Ala ma 6 kotów.
+Ala ma 4 koty.
+Ala ma 6 kotów.
+Ala ma 2 koty.
+Ala ma 8 kotów.
+Ala ma 9 kotów.
+Ala ma 2 koty.
+Ala ma 8 kotów.
+Ala ma 5 kotów.
+Ala ma 9 kotów.
+Ala ma 8 kotów.
+Ala ma jednego kota.
+
+----- B -----
+Ala ma 3 koty.
+Ala ma 2 koty.
+Ala ma 5 kotów.
+Ala ma 6 kotów.
+Ala ma 3 koty.
+Ala ma 4 koty.
+Ala ma jednego kota.
+
+----- C -----
+Ala ma 3 koty.
+Ala ma 2 koty.
+
+abc@abc:~/METODY_PROGRAMOWANIA/PRZYKŁADY/zad12$

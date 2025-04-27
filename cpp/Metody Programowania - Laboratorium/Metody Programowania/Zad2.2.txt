@@ -1,0 +1,34 @@
+adres* wsk = new adres("Częstochowa", "Dąbrowskiego", 73);
+
+cout <<  wsk << '\n';
+cout << *wsk << '\n';
+
+adres a1(*wsk);
+delete wsk;
+wsk=nullptr;
+
+const adres* wsk1 = new adres("Łódź", "Piotrkowska", 33);
+
+cout << a1 << '\n';
+cout << *wsk1 << '\n';
+
+adres a2;
+cout << a2 << '\n';
+a2 = a1;
+cout << a2 << '\n';
+
+osoba os1("Ala", 25, *wsk1);
+delete wsk1;
+
+cout << os1 << '\n';
+osoba os2(os1);
+
+os1.miasto()="Zmieniono miasto osoby 1.";
+cout << os1 << '\n';
+
+osoba os3;
+cout << os3 << '\n';
+os3 = os2;
+
+os1.miasto()="Drugi raz zmieniono miasto osoby 1.";
+cout << os1 << '\n';

@@ -1,0 +1,31 @@
+//...
+
+  vec<int> t1(4);
+  for (int i = 0; i < t1.size(); ++i) {
+    cout << t1[i];
+    t1[i] = i;
+  }
+  cout << t1;
+ 
+  string s[] = {"Ala", "ma", "kota"};
+ 
+  const vec<string> s1(s, s+3);
+  cout << s1;
+ 
+  vec<int> t2(t1);
+  cout << t2;
+ 
+  vec<string> s2;
+  s2 = s1;
+  cout << s2;
+ 
+  vec< para<string, int> > vp1;
+
+  ifstream plik("data2.csv");
+  //...
+
+  plik >> vp1;
+  cout << vp1;
+
+    
+//...

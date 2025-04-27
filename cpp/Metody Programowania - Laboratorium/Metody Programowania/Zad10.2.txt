@@ -1,0 +1,85 @@
+#include ...
+#include ...
+#include ...
+#include ...
+
+// ...
+
+constexpr void println(auto const & a) { std::cout << a << std::endl; }
+
+class losuj {
+  /* ... */
+};  
+
+class alg1 {
+  /* ... */  
+};  
+
+//...
+
+int main(){
+  vector<int> ve1(20), ve2(20);
+  list<int> li1, li2;
+  ostream_iterator<int> out_it(cout, ", ");
+  int min1(30), max1(80), min2(40), max2(65);
+
+  auto view = [&out_it](auto&& ob, string txt){
+    println(txt);  
+    copy(ob.begin(), ob.end(), out_it);
+    cout << "\n\n";
+  }; // to jest funkcja lambda
+
+  // poczyjaj na temat generate_n
+  generate_n(ve1.begin(), 20, losuj(min1, max1));
+  generate_n(ve2.begin(), 20, losuj(min1, max1));
+  cout << "dodaj opis ...";
+  copy(ve1.begin(), ve1.end(),  out_it );
+  cout << endl;  
+ 
+  view(ve2, "dodaj opis" ); //Jeśli nie rozumesz jeszcze działania tego obiektu funkcyjnego
+                            //użyj algorytmu copy
+                            //lub innego znanego Ci sposobu pozwalającego wyświetlić wartości ve2.
+                           
+ 
+  //...
+
+  // poczyjaj na temat remove_copy_if
+  remove_copy_if(ve2.begin(), ve2.end(), back_inserter(li1), alg1(min2, max2));
+  view(li1, "dodaj opis" );
+
+  //remove_copy_if(ve2.begin(), ve2.end(), back_inserter(li2), ... );
+  view(li2, "dodaj opis" ); 
+
+  //...
+
+  return 0;
+}
+
+Przykładowy wynik:
+
+Wektor ve1 - elementy z przedziału <30, ..., 80):
+40, 65, 78, 56, 46, 41, 35, 53, 36, 56, 79, 46, 67, 69, 50, 63, 55, 42, 39, 57,
+
+Wektor ve2 - elementy z przedziału <30, ..., 80):
+40, 47, 60, 45, 70, 73, 46, 63, 75, 60, 46, 37, 41, 76, 78, 51, 55, 42, 65, 59,
+
+ve2 - posortowany:
+37, 40, 41, 42, 45, 46, 46, 47, 51, 55, 59, 60, 60, 63, 65, 70, 73, 75, 76, 78,
+
+
+ve2 - po przetworzeniu algorytmem unique():
+37, 40, 41, 42, 45, 46, 47, 51, 55, 59, 60, 63, 65, 70, 73, 75, 76, 78, 76, 78,
+
+
+ve2 - po usunięciu wartości powtarzających się:
+37, 40, 41, 42, 45, 46, 47, 51, 55, 59, 60, 63, 65, 70, 73, 75, 76, 78,
+
+
+Lista li1 - elementy należące do przedziału <40, ..., 65>:
+40, 41, 42, 45, 46, 47, 51, 55, 59, 60, 63, 65,
+
+
+Lista li2 - elementy należące do przedziałów <30, ..., 40) && (65, ..., 80):
+37, 70, 73, 75, 76, 78,
+
+

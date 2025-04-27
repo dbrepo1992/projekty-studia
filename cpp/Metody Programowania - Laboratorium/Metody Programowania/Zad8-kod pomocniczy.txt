@@ -1,0 +1,178 @@
+#include <iostream>
+#include<vector>
+#ifdef _WIN32
+  #include <windows.h>
+#endif // _WIN32 and _WIN64 too
+
+using namespace std;
+
+class robot;
+//typedef  robot* wsk;
+using wsk = robot*;  // Jeśli masz w miarę aktualny kompilator to ten sposób deklarowania własnej nazwy ( dostępny od C++11 ) 
+                     // nie powinien wymagać dodawania flagi -std=c++11 (14 i więcej) przy kompilacji kodu 
+
+class robot{         // abstrakcyjna klasa bazowa 
+  protected:
+  static int l_ob;   // pole statyczne, które możesz wykorzystać do liczenia obiektów klas pochodnych
+  public:
+  static int l_obiektow(){return l_ob;}
+  // Napisz deklarację czysto wirtualnej metody praca. Z tym nie powinno być żadnych problemów. 
+
+  // ALE !!!
+  // Z treści zadania wynika, że klasa line ma umożliwiać tworzenie kopii obiektów (kopii lnii grupujących roboty).
+  // Tak na prawdę to roboty (typu r1 i r2) mają być obiektami dynamicznymi, a wektor (implementujący sekwencję robotów, których kolejność może być dowolna) 
+  // ma być wektorem przechowującym adresy tych robotów.
+  // Czy umiesz sobie wyobrazić tę sytuację, w której tworzona jest kopia obiektu klasy line? Co będzie się działo jeśli taka operacja będzie realizowana?
+  // Popatrz na ten przykład.
+  // Jeśli zdefiniujemy obiekt:
+  //    line lx; 
+  // to wektor adresów obiektu lx będzie pusty.
+  // Jeśli teraz wykonamy:
+  //    lx.dodaj_ostatni(new r1);
+  //    lx.dodaj_ostatni(new r2);
+  //    lx.dodaj_ostatni(new r1);
+  // to wektor (reprezentujący sekwencję robotów - obiektu lx) zawierać będzie trzy adresy obiektów dynamicznych.  
+  // Jeśli stworzymy kopię obiektu klasy line:
+  //    line ly(lx);
+  // to nie wystarczy by obiekt ly posiadał wektor z tymi samymi adresami obiektów co obiekt lx.
+  // Tu musi powstać kopia obiektu (klasy line), która będzie "zarządzać" wektorem własnych obiektów dynamicznych 
+  // typu r1 i r2, które są identyczne jak te, którymi "zarządza" obiekt lx.  
+ 
+
+  // !!! By móc to zrealizować, w klasie robot, należy zadeklarować jeszcze jedną metodę czysto wirtualną.
+  // Nazwijmy ją clone() - klonuj. Jej zadaniem będzie dostarczenie wspólnego interfejsu
+  // dla właściwych implementacji tej funkcji w klasach pochodnych.
+
+  // Powinieneś teraz zastanowić się co ma zwrócić ta funkcja, w kontekście tego co mają robić implementacje tej funkcji zdefiniowane w klasach pochodnych. (Pamiętaj, że we wszystkich klasach (w hierarchii klas) deklaracje funkcji wirtualnych muszą być takie same)
+  // Zadaniem funkcji clone() ma być utworzenie klonu obiektu, który właśnie metodę tę wywołał. 
+  // Oznacza to, że jeśli jakiś obiekt (powiedzmy typu r1 ) wywołał tę metodę, to w wyniku jej działania ma powstać nowy obiekt typu r1, który jest kopią właśnie tego obiektu. 
+  // Mówiąc inaczej, obiekt wywołujący tę metodę ma stworzyć kopię samego siebie.
+  // Jeśli dalej zastanawiasz się jaki powinien być typ wartości zwracanej przez clone() to musisz wrócić do poprzedniego zadania (ale też i do wykładu) i przeanalizować jeszcze raz sposób wywoływania funkcji wirtualnych uruchamiający wiązanie dynamiczne. 
+  // Pamiętaj, że funkcja clone() ma gwarantować niezmienność obiektu, który ją wywołuje.     
+  
+  virtual ~robot(){ cout << "~robot()" << endl;}  // W poprzednim przykładzie poruszyłem już kwestię wirtualnego destruktora. 
+};
+
+class r1 : public robot {
+  public:
+  r1(){l_ob++;}                               // Zastanów się jak działa zmienna robot::l_ob .
+  r1(const r1& r){l_ob++;}                    //            
+  void praca()const // resztę dopisz sam   
+  // tu zdefiniuj metodę clone()  
+  ~r1(){cout << "~r1()" << endl; l_ob--;}      
+};
+
+class r2 : public robot {
+  // analogicznie jak dla r1
+};
+
+class line{
+  vector <wsk> ve; // wszystkie informacje dotyczące klasy std::vector<T> znajdziesz np. tutaj: https://en.cppreference.com/w/cpp/container/vector   
+
+  public:
+  line(){}
+  line(int r):ve(r){ 
+    cout << "Wartości wektora ve : " ;
+	//*
+    for(size_t i=0; i<ve.size(); ++i ) 
+	  cout << ve[i] << ", " ; 
+    /*/ // lub od standardu C++11 możesz zrobić to tak:
+	for( auto&& ref : ve )
+	  cout << ref << ", " ; 
+    // */	
+    cout << endl;
+  }
+
+  line(const wsk* b, const wsk* e);    // Pamiętaj,  
+  line(const line& arg);               // że w każdej z tych funkcji masz zadbać o to, by obiekt klasy line
+  line& operator = (const line& a);    // "zarządzał" własnym zestawem obiektów dynamicznych.
+  
+  void dodaj_ostatni( const wsk& arg);
+  void dodaj_ity(int i,  const wsk& arg);
+  void usun_ity(int i);
+  void usun_ostatni();
+  
+  void do_roboty()//...
+  
+  ~line();
+};
+
+
+//Tutaj musisz zdefiniować statyczne pole robot::l_ob (przykład znajdziesz w wykładzie) 
+
+void liczba_obiektow(){
+  cout << "liczba_obiektów = " << robot::l_obiektow() << endl;
+}
+
+int main()try{
+  #ifdef _WIN32
+    SetConsoleOutputCP(CP_UTF8);
+  #endif	
+  {
+    liczba_obiektow();
+    { line l1 ;    }
+    { line l2(5) ; }
+    liczba_obiektow();
+    cout << "--==**1**==--" << endl;
+    line lp1, lp2;
+    //liczba_obiektow();
+    lp1.dodaj_ostatni(new r1);
+    lp1.dodaj_ostatni(new r1);
+    lp1.dodaj_ostatni(new r2);
+    lp1.dodaj_ostatni(new r2); 
+    //liczba_obiektow();
+    lp2=lp1;
+    //liczba_obiektow();
+    {
+      line lp3;
+      //liczba_obiektow();
+      lp3.dodaj_ostatni(new r1);
+      lp3.dodaj_ostatni(new r2);
+      lp3.dodaj_ostatni(new r1);
+      lp3.dodaj_ostatni(new r2);
+      //liczba_obiektow();
+      lp3.usun_ostatni();     //To powinno spowodować wywołanie destruktorów ~r2() i ~robot() 
+      //liczba_obiektow();
+      cout << "--==**2**==--" << endl;
+      //liczba_obiektow();
+      lp3.do_roboty();        //Tu powinieneś zobaczyć, że pracowały roboty typu r1, r2 i r1
+      //liczba_obiektow();
+      lp1 = lp3;
+      cout << "--==**2a**==--" << endl;	  
+      //liczba_obiektow();
+    }                         //Koniec zasięgu obiektu lp3 powinien skutkować wywołaniem 
+    //liczba_obiektow();
+    cout << "--==**3**==--" << endl;
+    lp1.do_roboty();          //Tu powinieneś zobaczyć, że pracowały roboty typu r1, r2 i r1
+    cout << "--==**4**==--" << endl;
+     
+    wsk TabAdrRob[] = {new r2, new r2};
+    //liczba_obiektow();
+    line lp4(TabAdrRob, TabAdrRob+2 );
+	lp4.dodaj_ity(1, new r1); //Dodaj na pozycję o indeksie 1 robot (jego adres) typu r1
+    //liczba_obiektow();
+    lp4.do_roboty();          //Tu powinieneś zobaczyć, że pracowały roboty typu r2, r1 i r2   
+    cout << "--==**5**==--" << endl;
+    //liczba_obiektow();
+    lp4 = lp2;
+    lp4.do_roboty();
+    cout << "--==**6**==--" << endl;
+    line lp6(lp1);
+	lp6.usun_ity(1);          //Usuń robot na pozycji o indeksie 1 
+    lp6.do_roboty();          //Tu powinieneś zobaczyć, że pracowały dwa roboty typu r1 
+    cout << "--==**7**==--" << endl;
+    
+    //liczba_obiektow();
+    delete TabAdrRob[0];
+    delete TabAdrRob[1];
+  }
+  liczba_obiektow();         //Tutaj liczba obiektów powinna być równa zero.
+                             //Jeśli jest inaczej musisz popracować nad swoim programem.    
+  #ifdef _WIN32              
+    system("PAUSE");
+  #endif  
+  return 0;
+}
+catch(...){
+  cout << "Ooooops!\nCoś poszło nie tak.\n"; 
+}

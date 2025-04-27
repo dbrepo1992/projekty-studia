@@ -1,0 +1,145 @@
+#include <iostream>
+#ifdef _WIN32
+  #include <windows.h>
+#endif // _WIN32 and _WIN64 too
+
+using namespace std;
+
+class pomiar{
+ protected:
+  string opis;
+  size_t roz;
+  double* tab; // Pamiętaj, że zmienna tab jest wskaźnikiem mogącym przechowywać adres obiektu typu double.
+               // W tym przypadku będzie to adres pierwszego elementu dynamicznej tablicy typu double.
+
+ public:
+  pomiar(): roz(0),tab(nullptr){} // Czy rozumiesz co to znaczy, że wskaźnik tab ma zostać zainicjowany wartością zero?
+  pomiar(const string& a):opis(a), roz(0),tab(nullptr){}
+  pomiar(const string& a, const double* p, const double* k) // Dalej dokończ sam.
+                                                            // Zmienna p wskazuje na początek, a zmienna k na koniec (adres za ostatnim elementem) tablicy,
+                                                            // z której dane mają być przepisane do tablicy tworzonego obiektu.
+
+  pomiar(const pomiar& a);                // Ten konstruktor już znasz. Powinieneś też wiedzieć dlaczego jest on potrzebny w tej klasie. Kilka razy była też o tym mowa na wykładzie.
+  pomiar& operator=(const pomiar& a);     // Operator, który występuje w parze z poprzednim konstruktorem.
+                                          // Jeśli nie wiesz po co i dla czego musisz zdefiniować (poprawnie) te funkcje koniecznie wróć do zadania 2 i 3, ale zrób te zadania sam.
+
+  pomiar& operator+=(const string& r);    // += to operator, który modyfikuje lewy argument. W przypadku, gdy prawym argumentem jest obiekt klasy string ten operator modyfikuje tylko pole opis.
+  pomiar& operator+=(const double& r);    // Jeśli jednak prawym argumentem jest liczba to każdy z elementów tablicy jest modyfikowany o tę liczbę.
+
+  pomiar& operator*=(const double& r);    // Ten operator działa analogicznie jak pomiar& operator+=(const double& r).
+
+
+
+  virtual double oblicz_wynik() const= 0;    // To jest metoda czysto wirtualna tzn taka, dla której nie jest dostarczana implementacja (nie ma ciała funkcji).
+                                             // Jeśli w klasie zadeklarowano choćby jedną funkcję czysto wirtualną to klasa taka jest klasą abstrakcyjną. Nie można definiować samodzielnie istniejących obiektów tej klasy.
+                                             // Obiekty takiej klasy mogą istnieć jedynie jako podobiekty klas pochodnych. W klasie pochodnej należy jednak dostarczyć implementacje tych funkcji.
+                                             // Klasa, która nie dostarcza implementacji metody wirtualnej dziedziczy metodę czysto wirtualną i staje się tym sposobem również klasą abstrakcyjną.
+                                             // Częstym błędem popełnianym przez niewprawnych programistów jest dostarczanie implementacji funkcji podobnych do tej, którą zadeklarowano jako czysto wirtualną.
+                                             // Wystarczy np. zamiast double oblicz() const {...} w klasie pochodnej zdefiniować funkcję double oblicz(){...} i wszystko przestaje się kompilować.
+
+  virtual ostream& pokaz_opis(ostream&)const=0;
+
+  virtual ~pomiar(){/*napisz sam*/}          // Jest zasada, że jeśli w klasie bazowej zadeklarowano choćby jedną funkcję wirtualną
+                                             // to klasa powinna dostarczać także DEFINICJĘ wirtualnego destruktora
+                                             // Przeanalizuj przykład klas B1, P1 i B2, P2 omawiany w drugiej części wykładu .
+
+
+  friend ostream& operator<< (ostream& a, const pomiar& r);
+
+  friend
+  pomiar& operator+(const string& la, pomiar& pa);
+
+};
+
+ostream& operator<< (ostream& a, const pomiar& r){   // Polimorficznymi mogą być jedynie funkcje w hierarchii klas.
+  return r.pokaz_opis(a) ;                           // Funkcka realizująca przeciążenie operatora<< nigdy nie może być jednak metodą klasy. 
+}                                                    // Można jednak "zmusić" ten operator do działania polimorficznego - poprzez wywołanie (w ciele funkcji) polimorficznej metody. 
+                                                                        
+                                                                        
+
+
+pomiar& operator+(const string& la, pomiar& pa){
+  // mimo, że nie jest to operator z kategorii +=, *=, itd. to nie ma najmniejszych przeszkód, by mógł modyfikować lewy argument
+  // resztę napisz sam
+}
+
+
+// Klasy ciezar i temp nie mają żadnych pól.
+// Dostarczają jedynie odpowiedni zbiór funkcji.
+class ciezar : public pomiar {
+  public:
+};
+class temp : public pomiar {
+  public:
+};
+
+
+void pokaz_wszystko // zdefiniuj tę funkcję. Pamiętaj o sytuacjach wyjątkowych
+
+int main()try{
+  #ifdef _WIN32
+    SetConsoleOutputCP(CP_UTF8);
+  #endif
+
+  double dane[] = { 0.0, 1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8 };
+
+  // pomyśl jakiego typu ma być zmienna tab
+
+  tab[0] = new ciezar("cytryny") ;
+  tab[1] = new temp("poranki", dane+3, dane+6);
+  tab[2] = new ciezar("jabłka", dane+1, dane+3) ;
+  tab[3] = new temp("wieczory", dane+1, dane+9);
+  tab[4] = new ciezar;
+
+  cout << "********** 1 **********" << endl;
+  for (int i=0; i<5; ++i)
+    cout << *tab[i] << endl ;  // Tu powinieneś zobaczyć polimorficzne dziłanie funkcji pokaz_opis(...)
+
+
+  cout << "\n********** 2 **********" << endl;
+
+  for (int i=0; i<5; ++i)
+    //... Napisz kod, którym wyświetlisz wyniki tak jak pokazano to treści zadania.
+    // Tu musisz zobaczyć polimorficzne działanie zdefiniowanych funkcji.
+
+  cout << "\n********** 2a *********" << endl;
+  // Tu modyfikujesz obiekty na różne sposoby
+  // Zastanów się, jak wywoływane są kolejne operatory
+  
+  *tab[0] =  ciezar("cytryny", dane, dane+1);
+  *tab[0] =  ("[kg] " + *tab[0]) += "po wyprzedaży";  //Zastanów się jaki jest typ i co jest wartością wyrażenia ("[kg] " + *tab[0])  
+  *tab[1] =  "Wiosenne " + *tab[1];
+  *tab[2] += "ANTONÓWKI suszone";
+  *tab[2] *= 0.1;
+  *tab[3] += "po korekcie odczytu";
+  *tab[3] += 0.1;
+
+  for (int i=0; i<5; ++i)
+  //... Napisz kod, którym wyświetlisz wyniki tak jak pokazano to treści zadania.
+  // Tu musisz zobaczyć polimorficzne działanie zdefiniowanych funkcji.
+
+  for (int i=0; i<5; ++i)
+    delete tab[i];
+
+
+  cout << "\n********** 3 **********" << endl;
+  const ciezar test1("gruszki", dane, dane+9);
+  const temp test2;
+
+  // Napisz funkcję pokaz_wszystko(...). 
+  // Funkcja ta powinna umożliwiać dynamiczne (późne) wiązanie funkcji wirtualnych.
+  // ???_01 Poeksperymentuj ze sposobem przekazywania argumentów tej funkcji
+  pokaz_wszystko(cout, test1);
+  pokaz_wszystko(cout, test2);
+  pokaz_wszystko(cout, ciezar());
+  pokaz_wszystko(cout, temp("Jakaś tam", dane+8, dane+9));
+
+
+  #ifdef _WIN32
+    system("PAUSE");
+  #endif
+  return 0;
+}
+catch(...){
+  cout << "Ooooops!\nCoś poszło nie tak.\n";
+}
