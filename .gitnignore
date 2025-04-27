@@ -1,0 +1,30 @@
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.log
+*.tmp
+
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+
+# C++
+*.o
+*.out
+*.exe
+*.log
+
+# Assembly
+*.o
+*.lst
+*.bin
+*.log
+
+# Ogólne
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
