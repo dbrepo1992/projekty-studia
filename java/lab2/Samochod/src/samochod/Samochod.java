@@ -9,40 +9,76 @@ public class Samochod {
     private double srednieSpalanie;
 
 
-    // Created get functions for each private
+    // Created get and set functions for each private
     //              ||
     //              ||
     //             \  /
     //              \/
 
 
-    
-    public String marka() {
+    // getter marka
+    public String getMarka() {
         return marka;
     }
 
+    // setter marka
+    public void setMarka(String marka) {
+        this.marka = marka;
+    }
 
-    public String model() {
+
+
+
+    // setter model
+    public String setModel() {
         return model;
     }
 
+    // getter model
+    public void setModel(String model) {
+        this.model = model;
+    }
 
-    public int iloscDrzwi() {
+
+
+
+    // getter iloscDrzwi
+    public int getIloscDrzwi() {
         return iloscDrzwi;
     }
+    // setter iloscDrzwi
+    public void setIloscDrzwi(int iloscDrzwi) {
+        this.iloscDrzwi = iloscDrzwi;
+    }
 
 
-    public int pojemnoscSilnika() {
+
+
+    // getter pojemnoscSilnika
+    public int getPojemnoscSilnika() {
         return pojemnoscSilnika;
     }
-
-
-    public double srednieSpalanie() {
-        return srednieSpalanie;
+    // setter pojemnoscSilnika
+    public void setPojemnoscSilnika(int pojemnoscSilnika) {
+        this.pojemnoscSilnika = pojemnoscSilnika;
     }
 
+
+
+
+
+    // getter srednieSpalanie
+    public double getSrednieSpalanie() {
+        return srednieSpalanie;
+    }
+    // setter srednieSpalanie
+    public void setSrednieSpalanie(double srednieSpalanie) {
+        this.srednieSpalanie = srednieSpalanie;
+    }
+
+
     public static void main(String[] args) {
-        // TODO code application logic here
+
     }
 
 }
