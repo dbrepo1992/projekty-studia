@@ -7,6 +7,15 @@ public class Samochod {
     private int iloscDrzwi;
     private int pojemnoscSilnika;
     private double srednieSpalanie;
+    private static int iloscSamochodow = 0;
+
+    public Samochod() {
+        marka = "nieznana";
+        model = "nieznany";
+        iloscDrzwi = 0;
+        pojemnoscSilnika = 0;
+        srednieSpalanie = 0.0;
+    }
 
 
     // Created get and set functions for each private
