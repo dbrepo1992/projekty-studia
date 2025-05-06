@@ -61,7 +61,7 @@ public class Samochod {
 
 
     // setter model
-    public String setModel() {
+    public String getModel() {
         return model;
     }
 
@@ -105,6 +105,30 @@ public class Samochod {
         this.srednieSpalanie = srednieSpalanie;
     }
 
+    private double obliczSpalanie(double dlugoscTrasy) {
+        return((srednieSpalanie * dlugoscTrasy) / 100.0);
+    }
+
+
+    public double obliczKosztPrzejazdu (double dlugoscTrasy, double cenaPaliwa) {
+        double spalanie = obliczSpalanie(dlugoscTrasy);
+        return spalanie * cenaPaliwa;
+    }
+
+    public void wypiszInfo() {
+        System.out.println("Marka: " + marka);
+        System.out.println("Model: " + model);
+        System.out.println("Ilość drzwi: " + iloscDrzwi);
+        System.out.println("Pojemność silnika: " + pojemnoscSilnika + " cm3");
+        System.out.println("Średnie spalanie: " + srednieSpalanie + " l/100km");
+        System.out.println("Koszt przejazdu: " + obliczKosztPrzejazdu(30.5, 4.85) + " zł");
+    }
+
+
+
+    public static void wypiszIloscSamochodow() {
+        System.out.println("Ilosc samochodów: " + iloscSamochodow);
+    }
 
     public static void main(String[] args) {
 
@@ -118,7 +142,16 @@ public class Samochod {
         // konstruktor = konfigurujemy ten samochód (marka, model, silnik, itd.)
 
         Samochod s1 = new Samochod();
-        Samochod s2 = new Samochod("Toyota", "Corolla", 4, 1600, 6.5);
+        s1.wypiszInfo();
+        s1.setMarka("Fiat" );
+        s1.setModel( "126p" );
+        s1.setIloscDrzwi( 2 );
+        s1.setPojemnoscSilnika( 650 );
+        s1.setSrednieSpalanie( 6.0 );
+        s1.wypiszInfo();
+        Samochod s2 = new Samochod("Syrena", "105", 2, 800, 7.6);
+        s2.wypiszInfo();
+        Samochod.wypiszIloscSamochodow();
     }
 
 }
