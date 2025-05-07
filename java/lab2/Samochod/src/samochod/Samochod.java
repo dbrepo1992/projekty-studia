@@ -115,14 +115,28 @@ public class Samochod {
         return spalanie * cenaPaliwa;
     }
 
+
+    // public – metoda dostępna spoza klasy (np. z main()).
+    // void – nie zwraca żadnej wartości.
+    // Nie przyjmuje parametrów – działa na polach obiektu, którego dotyczy.
+    // Każda linia System.out.println(...) wypisuje jedno pole wraz z opisem
     public void wypiszInfo() {
         System.out.println("Marka: " + marka);
         System.out.println("Model: " + model);
         System.out.println("Ilość drzwi: " + iloscDrzwi);
         System.out.println("Pojemność silnika: " + pojemnoscSilnika + " cm3");
         System.out.println("Średnie spalanie: " + srednieSpalanie + " l/100km");
-        System.out.println("Koszt przejazdu: " + obliczKosztPrzejazdu(30.5, 4.85) + " zł");
+        System.out.printf("Koszt przejazdu: %.2f zł%n: ", obliczKosztPrzejazdu(30.5, 4.85)); // Dobrą praktyką jest formatowanie liczb do dwóch miejsc po przecinku,
     }
+    // System.out.println(...) – standardowe wypisywanie.Wypisuje dane na konsolę i automatycznie dodaje znak nowej linii na końcu (\n).
+    // Nie formatuje danych – wszystko wypisuje tak, jak mu przekażesz.
+
+    // System.out.printf(...) – wypisywanie sformatowane
+    // Działa podobnie jak printf w C/C++.
+    // Pozwala kontrolować ilość miejsc po przecinku, wyrównanie, format daty, itd.
+    // Nie dodaje automatycznie nowej linii – jeśli chcesz nową linię, użyj %n (zalecane) lub \n.
+
+
 
 
 
