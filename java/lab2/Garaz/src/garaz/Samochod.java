@@ -1,4 +1,4 @@
-package samochod;
+package garaz;
 
 public class Samochod {
 
@@ -155,17 +155,24 @@ public class Samochod {
         // new = budujemy nowy samochód (baza)
         // konstruktor = konfigurujemy ten samochód (marka, model, silnik, itd.)
 
-        Samochod s1 = new Samochod();
-        s1.wypiszInfo();
-        s1.setMarka("Fiat" );
-        s1.setModel( "126p" );
-        s1.setIloscDrzwi( 2 );
-        s1.setPojemnoscSilnika( 650 );
-        s1.setSrednieSpalanie( 6.0 );
-        s1.wypiszInfo();
+        Samochod s1 = new Samochod("Fiat", "126p", 2, 650, 6.0);
         Samochod s2 = new Samochod("Syrena", "105", 2, 800, 7.6);
-        s2.wypiszInfo();
-        Samochod.wypiszIloscSamochodow();
+        Garaz g1 = new Garaz();
+        g1.setAdres( "ul. Garażowa 1" );
+        g1.setPojemnosc( 1 );
+        Garaz g2 = new Garaz("ul. Garażowa 2", 2);
+        g1.wprowadzSamochod(s1);
+        g1.wypiszInfo();
+        g1.wprowadzSamochod(s2);
+        g2.wprowadzSamochod(s2);
+        g2.wprowadzSamochod(s1);
+        g2.wypiszInfo();
+        g2.wyprowadzSamochod();
+        g2.wypiszInfo();
+        g2.wyprowadzSamochod();
+        g2.wyprowadzSamochod();
     }
 
+
 }
+
