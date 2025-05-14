@@ -5,6 +5,12 @@ protected String imie;
 protected String nazwisko;
 protected String dataUrodzenia;
 
+public Osoba(){
+    this.imie = "imie";
+    this.nazwisko = "nazwisko";
+    this.dataUrodzenia = "data urodzenia";
+}
+
 public Osoba(String imie, String nazwisko, String dataUrodzenia) {
     this.imie = imie;
     this.nazwisko = nazwisko;

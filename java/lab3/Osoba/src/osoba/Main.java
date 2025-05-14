@@ -1,5 +1,6 @@
 package osoba;
 
+
 public class Main {
         public static void main(String[] args) {
             Osoba o = new Osoba("Adam", "Adamowski", "1990-02-02");
@@ -17,5 +18,24 @@ public class Main {
             p.strzelGola();
             o3.wypiszInfo();
             p.wypiszInfo();
+            ((Student)o2).dodajOcene("Progamowanie obiektowe", "2020-04-24", 5);
+            ((Student)o2).dodajOcene("Bazy danych", "2020-04-14", 5);
+            o2.wypiszInfo();
+            s.dodajOcene("Bazy danych", "2020-03-20", 5);
+            s.dodajOcene("Matematyka", "2020-03-15", 3);
+            s.dodajOcene("Matematyka", "2020-03-20", 2);
+            s.wypiszInfo();
+            s.usunOcene("Matematyka", "2020-03-15", 3);
+            s.wypiszInfo();
+            s.dodajOcene("Matematyka", "2020-03-15", 4);
+            s.usunOceny("Matematyka");
+            s.wypiszInfo();
+            s.dodajOcene("Matematyka", "2020-03-15", 4);
+            s.usunOceny();
+            s.wypiszInfo();
+            PilkarzReczny reczny = new PilkarzReczny("Tomasz", "Tracz", "1998-07-20", "skrzydłowy", "Vive Kielce");
+            reczny.strzelGola();
+            PilkarzNozny nozny = new PilkarzNozny("Robert", "Lewandowski", "1985-05-15", "Napastnik", "FC Barcelona");
+            nozny.strzelGola();
     }
 }
