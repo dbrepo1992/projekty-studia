@@ -36,6 +36,7 @@ public void setNrIndeksu(int nrIndeksu) {
 
 @Override
 public void wypiszInfo() {
+    super.wypiszInfo();
     System.out.println("Rok: " + rok);
     System.out.println("Grupa: " + grupa);
     System.out.println("Nr Indeksu: " + nrIndeksu);
