@@ -7,6 +7,7 @@ public class Trojkat extends FiguraGeometryczna {
     public Trojkat(double podstawa, double wysokosc) {
         this.podstawa = podstawa;
         this.wysokosc = wysokosc;
+        nazwa = "trojkat";
     }
         @Override
         public double obliczPole(){

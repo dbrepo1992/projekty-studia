@@ -8,6 +8,7 @@ public class Main {
         System.out.println( f2.getNazwa() + ", pole: " + f2.obliczPole() );
         FiguraGeometryczna f3 = new Trojkat(5, 6);
         System.out.println( f3.getNazwa() + ", pole: " + f3.obliczPole() );
+        
     }
 
 }
