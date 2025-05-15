@@ -35,7 +35,9 @@ public class Main {
             s.wypiszInfo();
             PilkarzReczny reczny = new PilkarzReczny("Tomasz", "Tracz", "1998-07-20", "skrzydłowy", "Vive Kielce");
             reczny.strzelGola();
+            reczny.wypiszInfo();
             PilkarzNozny nozny = new PilkarzNozny("Robert", "Lewandowski", "1985-05-15", "Napastnik", "FC Barcelona");
             nozny.strzelGola();
+            nozny.wypiszInfo();
     }
 }
