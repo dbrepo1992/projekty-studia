@@ -6,7 +6,7 @@ private String klub;
 private int liczbaGoli = 0;
 
 public Pilkarz(String imie, String nazwisko, String dataUrodzenia, String pozycja, String klub) {
-    super(imie, nazwisko, dataUrodzenia);
+    super(imie, nazwisko, dataUrodzenia); // wywołuje konstruktor klasy bazowej. Używane tylko wewnątrz konstruktora klasy potomnej.
     this.pozycja = pozycja;
     this.klub = klub;
 }

@@ -1,20 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package figurageometryczna;
 
-/**
- *
- * @author damia
- */
-public class FiguraGeometryczna {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+public abstract class FiguraGeometryczna {
+    protected String nazwa = null;
+    public abstract double obliczPole(); // wymusza implementację tej metody w klasach potomnych (Kwadrat, Kolo, itp.).
+
+    public String getNazwa() {
+        return nazwa;
     }
-    
+
+    public void setNazwa(String nazwa) {
+        this.nazwa = nazwa;
+    }
+
+
 }

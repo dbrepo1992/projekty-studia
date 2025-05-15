@@ -10,14 +10,14 @@ public class Student extends Osoba{
     private List<Ocena> oceny = new ArrayList<>();
 
     public Student(){
-        super();
+        super(); 
         this.rok = 1900;
         this.grupa = 0;
         this.nrIndeksu = 0;
     }
 
     public Student(String imie, String nazwisko, String dataUrodzenia, int rok, int grupa, int nrIndeksu) {
-        super(imie, nazwisko, dataUrodzenia);
+        super(imie, nazwisko, dataUrodzenia); // wywołuje konstruktor klasy bazowej. Używane tylko wewnątrz konstruktora klasy potomnej.
         this.rok = rok;
         this.grupa = grupa;
         this.nrIndeksu = nrIndeksu;

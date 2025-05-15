@@ -8,7 +8,7 @@ public class PilkarzReczny extends Pilkarz {
 
     @Override
     public void strzelGola() {
-        super.strzelGola();
+        super.strzelGola(); // wywołuje metodę z klasy bazowej.Używane poza konstruktorem, czyli np. w strzelGola()
         System.out.println("Reczny strzelil gola!");
     }
 }
