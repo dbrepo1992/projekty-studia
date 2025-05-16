@@ -2,56 +2,48 @@ package katalog;
 
 public class Main {
     public static void main(String[] args) {
-        // Tworzymy katalog
-        Katalog katalog = new Katalog("Literatura i Nauka");
-
-        // Tworzymy autorów
         Autor autor1 = new Autor("Adam", "Mickiewicz");
-        Autor autor2 = new Autor("Maria", "Curie-Skłodowska");
+        Autor autor2 = new Autor("Henryk", "Sienkiewicz");
+        Autor autor3 = new Autor("Maria", "Konopnicka");
 
-        // Tworzymy książki
-        Ksiazka ksiazka1 = new Ksiazka("Pan Tadeusz", 101, "PWN", 1834, 340, autor1);
-        Ksiazka ksiazka2 = new Ksiazka("O promieniotwórczości", 102, "PWN", 1903, 220, autor2);
+        Ksiazka ksiazka1 = new Ksiazka("Pan Tadeusz", 101, "PWN", 1834, 300, autor1);
+        Ksiazka ksiazka2 = new Ksiazka("Quo Vadis", 102, "PWN", 1896, 280, autor2);
+        Ksiazka ksiazka3 = new Ksiazka("Roty", 103, "Czytelnik", 1908, 150, autor3);
+        Czasopismo czas1 = new Czasopismo("National Geographic", 201, "NG Polska", 2024, 5);
+        Czasopismo czas2 = new Czasopismo("Scientific American", 202, "Prószyński i S-ka", 2023, 12);
 
-        // Tworzymy czasopisma
-        Czasopismo czasopismo1 = new Czasopismo("Przyroda Polska", 201, "Wiedza i Życie", 2023, 5);
-        Czasopismo czasopismo2 = new Czasopismo("Matematyka", 202, "Delta", 2024, 3);
+        Biblioteka biblioteka = new Biblioteka();
+        biblioteka.DodajPozycje("Literatura Polska", ksiazka1);
+        biblioteka.DodajPozycje("Literatura Polska", ksiazka2);
+        biblioteka.DodajPozycje("Literatura Polska", ksiazka3);
+        biblioteka.DodajPozycje("Czasopisma", czas1);
+        biblioteka.DodajPozycje("Czasopisma", czas2);
 
-        // Dodajemy pozycje do katalogu
-        katalog.DodajPozycje(ksiazka1);
-        katalog.DodajPozycje(ksiazka2);
-        katalog.DodajPozycje(czasopismo1);
-        katalog.DodajPozycje(czasopismo2);
+        System.out.println("\n== Wszystkie pozycje w bibliotece ==");
+        biblioteka.WypiszWszystkiePozycje();
 
-        // Wypisujemy wszystkie pozycje
-        System.out.println("=== Wszystkie pozycje w katalogu ===");
-        katalog.WypiszWszystkiePozycje();
-
-        // Szukamy pozycji po tytule
-        System.out.println("\n=== Szukamy pozycji po tytule ===");
-        Pozycja znalezionaTytul = katalog.ZnajdzPozycjePoTytule("Pan Tadeusz");
-        if (znalezionaTytul != null) {
-            znalezionaTytul.WypiszInfo();
+        // Szukanie po tytule
+        String tytulSzukany = "Quo Vadis";
+        System.out.println("\n== Szukam pozycji o tytule: " + tytulSzukany + " ==");
+        Pozycja znaleziona = biblioteka.ZnajdzPozycjePoTytule(tytulSzukany);
+        if (znaleziona != null) {
+            znaleziona.WypiszInfo();
+            String dzial = biblioteka.znajdzKatalogDlaPozycji(znaleziona);
+            System.out.println("Znaleziono w dziale: " + dzial);
         } else {
             System.out.println("Nie znaleziono pozycji o podanym tytule.");
         }
 
-        // Szukamy pozycji po ID
-        System.out.println("\n=== Szukamy pozycji po ID ===");
-        Pozycja znalezionaId = katalog.ZnajdzPozycjePoId(202);
-        if (znalezionaId != null) {
-            znalezionaId.WypiszInfo();
+        // Szukanie po ID
+        int szukaneId = 202;
+        System.out.println("\n== Szukam pozycji o ID: " + szukaneId + " ==");
+        Pozycja znalezionaPoId = biblioteka.ZnajdzPozycjePoId(szukaneId);
+        if (znalezionaPoId != null) {
+            znalezionaPoId.WypiszInfo();
+            String dzial = biblioteka.znajdzKatalogDlaPozycji(znalezionaPoId);
+            System.out.println("Znaleziono w dziale: " + dzial);
         } else {
             System.out.println("Nie znaleziono pozycji o podanym ID.");
         }
-
-        // Szukamy pozycji, która nie istnieje
-        System.out.println("\n=== Szukamy nieistniejącej pozycji ===");
-        Pozycja brak = katalog.ZnajdzPozycjePoTytule("Nieistniejący tytuł");
-        if (brak == null) {
-            System.out.println("Pozycja nie została znaleziona.");
-        }
     }
 }
-
-
