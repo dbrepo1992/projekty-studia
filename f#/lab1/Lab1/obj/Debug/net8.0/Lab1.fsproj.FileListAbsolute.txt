@@ -1,0 +1,5 @@
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\lab1\Lab1\obj\Debug\net8.0\Lab1.fsproj.AssemblyReference.cache
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\lab1\Lab1\obj\Debug\net8.0\Lab1.AssemblyInfoInputs.cache
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\lab1\Lab1\obj\Debug\net8.0\Lab1.AssemblyInfo.fs
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\lab1\Lab1\obj\Debug\net8.0\Lab1.fsproj.CoreCompileInputs.cache
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\lab1\Lab1\obj\Debug\net8.0\Lab1.sourcelink.json

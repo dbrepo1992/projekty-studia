@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\damia\\OneDrive\\Pulpit\\Studia II ROK I SEMESTR\\II Semestr\\Laborki\\f#\\lab1\\Lab1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{02B8361A-3CF9-409C-A3B3-57CF6DED3A04}|Lab1.fsproj|c:\\users\\damia\\onedrive\\pulpit\\studia ii rok i semestr\\ii semestr\\laborki\\f#\\lab1\\lab1\\odliczdostartu.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
+      "RelativeMoniker": "D:0:0:{02B8361A-3CF9-409C-A3B3-57CF6DED3A04}|Lab1.fsproj|solutionrelative:odliczdostartu.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02B8361A-3CF9-409C-A3B3-57CF6DED3A04}|Lab1.fsproj|c:\\users\\damia\\onedrive\\pulpit\\studia ii rok i semestr\\ii semestr\\laborki\\f#\\lab1\\lab1\\collatzstart.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
+      "RelativeMoniker": "D:0:0:{02B8361A-3CF9-409C-A3B3-57CF6DED3A04}|Lab1.fsproj|solutionrelative:collatzstart.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02B8361A-3CF9-409C-A3B3-57CF6DED3A04}|Lab1.fsproj|c:\\users\\damia\\onedrive\\pulpit\\studia ii rok i semestr\\ii semestr\\laborki\\f#\\lab1\\lab1\\obliczsrednia.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
+      "RelativeMoniker": "D:0:0:{02B8361A-3CF9-409C-A3B3-57CF6DED3A04}|Lab1.fsproj|solutionrelative:obliczsrednia.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02B8361A-3CF9-409C-A3B3-57CF6DED3A04}|Lab1.fsproj|c:\\users\\damia\\onedrive\\pulpit\\studia ii rok i semestr\\ii semestr\\laborki\\f#\\lab1\\lab1\\program.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
+      "RelativeMoniker": "D:0:0:{02B8361A-3CF9-409C-A3B3-57CF6DED3A04}|Lab1.fsproj|solutionrelative:program.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OdliczDoStartu.fs",
+              "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\Studia II ROK I SEMESTR\\II Semestr\\Laborki\\f#\\lab1\\Lab1\\OdliczDoStartu.fs",
+              "RelativeDocumentMoniker": "OdliczDoStartu.fs",
+              "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\Studia II ROK I SEMESTR\\II Semestr\\Laborki\\f#\\lab1\\Lab1\\OdliczDoStartu.fs",
+              "RelativeToolTip": "OdliczDoStartu.fs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-23T14:46:58.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CollatzStart.fs",
+              "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\Studia II ROK I SEMESTR\\II Semestr\\Laborki\\f#\\lab1\\Lab1\\CollatzStart.fs",
+              "RelativeDocumentMoniker": "CollatzStart.fs",
+              "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\Studia II ROK I SEMESTR\\II Semestr\\Laborki\\f#\\lab1\\Lab1\\CollatzStart.fs",
+              "RelativeToolTip": "CollatzStart.fs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-23T14:46:51.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ObliczSrednia.fs",
+              "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\Studia II ROK I SEMESTR\\II Semestr\\Laborki\\f#\\lab1\\Lab1\\ObliczSrednia.fs",
+              "RelativeDocumentMoniker": "ObliczSrednia.fs",
+              "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\Studia II ROK I SEMESTR\\II Semestr\\Laborki\\f#\\lab1\\Lab1\\ObliczSrednia.fs",
+              "RelativeToolTip": "ObliczSrednia.fs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-23T14:46:44.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.fs",
+              "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\Studia II ROK I SEMESTR\\II Semestr\\Laborki\\f#\\lab1\\Lab1\\Program.fs",
+              "RelativeDocumentMoniker": "Program.fs",
+              "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\Studia II ROK I SEMESTR\\II Semestr\\Laborki\\f#\\lab1\\Lab1\\Program.fs",
+              "RelativeToolTip": "Program.fs",
+              "ViewState": "AgIAANIBAAAAAAAAAAAwwOgBAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-23T13:46:27.803Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
