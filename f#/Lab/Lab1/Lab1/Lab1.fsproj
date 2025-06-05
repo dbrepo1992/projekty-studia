@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <WarnOn>3390;$(WarnOn)</WarnOn>
+    <Name>Lab1</Name>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Srednia.fs" />
+    <Compile Include="Collatz.fs" />
+    <Compile Include="Odliczanie.fs" />
+    <Compile Include="Lab1.fs" />
+  </ItemGroup>
+</Project>

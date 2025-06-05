@@ -1,0 +1,59 @@
+C:\Users\barte\source\repos\Lab4\Lab4\obj\Debug\net8.0\Lab4.fsproj.AssemblyReference.cache
+C:\Users\barte\source\repos\Lab4\Lab4\obj\Debug\net8.0\Lab4.AssemblyInfoInputs.cache
+C:\Users\barte\source\repos\Lab4\Lab4\obj\Debug\net8.0\Lab4.AssemblyInfo.fs
+C:\Users\barte\source\repos\Lab4\Lab4\obj\Debug\net8.0\Lab4.fsproj.CoreCompileInputs.cache
+C:\Users\barte\source\repos\Lab4\Lab4\bin\Debug\net8.0\Lab4.exe
+C:\Users\barte\source\repos\Lab4\Lab4\bin\Debug\net8.0\Lab4.deps.json
+C:\Users\barte\source\repos\Lab4\Lab4\bin\Debug\net8.0\Lab4.runtimeconfig.json
+C:\Users\barte\source\repos\Lab4\Lab4\bin\Debug\net8.0\Lab4.dll
+C:\Users\barte\source\repos\Lab4\Lab4\bin\Debug\net8.0\Lab4.pdb
+C:\Users\barte\source\repos\Lab4\Lab4\bin\Debug\net8.0\FSharp.Core.dll
+C:\Users\barte\source\repos\Lab4\Lab4\bin\Debug\net8.0\cs\FSharp.Core.resources.dll
+C:\Users\barte\source\repos\Lab4\Lab4\bin\Debug\net8.0\de\FSharp.Core.resources.dll
+C:\Users\barte\source\repos\Lab4\Lab4\bin\Debug\net8.0\es\FSharp.Core.resources.dll
+C:\Users\barte\source\repos\Lab4\Lab4\bin\Debug\net8.0\fr\FSharp.Core.resources.dll
+C:\Users\barte\source\repos\Lab4\Lab4\bin\Debug\net8.0\it\FSharp.Core.resources.dll
+C:\Users\barte\source\repos\Lab4\Lab4\bin\Debug\net8.0\ja\FSharp.Core.resources.dll
+C:\Users\barte\source\repos\Lab4\Lab4\bin\Debug\net8.0\ko\FSharp.Core.resources.dll
+C:\Users\barte\source\repos\Lab4\Lab4\bin\Debug\net8.0\pl\FSharp.Core.resources.dll
+C:\Users\barte\source\repos\Lab4\Lab4\bin\Debug\net8.0\pt-BR\FSharp.Core.resources.dll
+C:\Users\barte\source\repos\Lab4\Lab4\bin\Debug\net8.0\ru\FSharp.Core.resources.dll
+C:\Users\barte\source\repos\Lab4\Lab4\bin\Debug\net8.0\tr\FSharp.Core.resources.dll
+C:\Users\barte\source\repos\Lab4\Lab4\bin\Debug\net8.0\zh-Hans\FSharp.Core.resources.dll
+C:\Users\barte\source\repos\Lab4\Lab4\bin\Debug\net8.0\zh-Hant\FSharp.Core.resources.dll
+C:\Users\barte\source\repos\Lab4\Lab4\obj\Debug\net8.0\Lab4.fsproj.Up2Date
+C:\Users\barte\source\repos\Lab4\Lab4\obj\Debug\net8.0\Lab4.dll
+C:\Users\barte\source\repos\Lab4\Lab4\obj\Debug\net8.0\refint\Lab4.dll
+C:\Users\barte\source\repos\Lab4\Lab4\obj\Debug\net8.0\Lab4.pdb
+C:\Users\barte\source\repos\Lab4\Lab4\obj\Debug\net8.0\Lab4.genruntimeconfig.cache
+C:\Users\barte\source\repos\Lab4\Lab4\obj\Debug\net8.0\ref\Lab4.dll
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\Lab\Lab4\Lab4\bin\Debug\net8.0\Lab4.exe
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\Lab\Lab4\Lab4\bin\Debug\net8.0\Lab4.deps.json
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\Lab\Lab4\Lab4\bin\Debug\net8.0\Lab4.runtimeconfig.json
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\Lab\Lab4\Lab4\bin\Debug\net8.0\Lab4.dll
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\Lab\Lab4\Lab4\bin\Debug\net8.0\Lab4.pdb
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\Lab\Lab4\Lab4\bin\Debug\net8.0\FSharp.Core.dll
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\Lab\Lab4\Lab4\bin\Debug\net8.0\cs\FSharp.Core.resources.dll
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\Lab\Lab4\Lab4\bin\Debug\net8.0\de\FSharp.Core.resources.dll
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\Lab\Lab4\Lab4\bin\Debug\net8.0\es\FSharp.Core.resources.dll
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\Lab\Lab4\Lab4\bin\Debug\net8.0\fr\FSharp.Core.resources.dll
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\Lab\Lab4\Lab4\bin\Debug\net8.0\it\FSharp.Core.resources.dll
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\Lab\Lab4\Lab4\bin\Debug\net8.0\ja\FSharp.Core.resources.dll
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\Lab\Lab4\Lab4\bin\Debug\net8.0\ko\FSharp.Core.resources.dll
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\Lab\Lab4\Lab4\bin\Debug\net8.0\pl\FSharp.Core.resources.dll
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\Lab\Lab4\Lab4\bin\Debug\net8.0\pt-BR\FSharp.Core.resources.dll
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\Lab\Lab4\Lab4\bin\Debug\net8.0\ru\FSharp.Core.resources.dll
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\Lab\Lab4\Lab4\bin\Debug\net8.0\tr\FSharp.Core.resources.dll
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\Lab\Lab4\Lab4\bin\Debug\net8.0\zh-Hans\FSharp.Core.resources.dll
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\Lab\Lab4\Lab4\bin\Debug\net8.0\zh-Hant\FSharp.Core.resources.dll
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\Lab\Lab4\Lab4\obj\Debug\net8.0\Lab4.fsproj.AssemblyReference.cache
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\Lab\Lab4\Lab4\obj\Debug\net8.0\Lab4.AssemblyInfoInputs.cache
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\Lab\Lab4\Lab4\obj\Debug\net8.0\Lab4.AssemblyInfo.fs
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\Lab\Lab4\Lab4\obj\Debug\net8.0\Lab4.fsproj.CoreCompileInputs.cache
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\Lab\Lab4\Lab4\obj\Debug\net8.0\Lab4.sourcelink.json
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\Lab\Lab4\Lab4\obj\Debug\net8.0\Lab4.fsproj.Up2Date
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\Lab\Lab4\Lab4\obj\Debug\net8.0\Lab4.dll
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\Lab\Lab4\Lab4\obj\Debug\net8.0\refint\Lab4.dll
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\Lab\Lab4\Lab4\obj\Debug\net8.0\Lab4.pdb
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\Lab\Lab4\Lab4\obj\Debug\net8.0\Lab4.genruntimeconfig.cache
+C:\Users\damia\OneDrive\Pulpit\Studia II ROK I SEMESTR\II Semestr\Laborki\f#\Lab\Lab4\Lab4\obj\Debug\net8.0\ref\Lab4.dll

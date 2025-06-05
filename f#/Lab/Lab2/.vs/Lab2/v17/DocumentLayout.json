@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\damia\\OneDrive\\Pulpit\\Studia II ROK I SEMESTR\\II Semestr\\Laborki\\f#\\lab4\\Lab4\\Lab2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9A4D5BBF-5166-4D05-B101-0FA135F4AF5E}|Lab2\\Lab2.fsproj|c:\\users\\damia\\onedrive\\pulpit\\studia ii rok i semestr\\ii semestr\\laborki\\f#\\lab4\\lab4\\lab2\\lab2\\program.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}",
+      "RelativeMoniker": "D:0:0:{9A4D5BBF-5166-4D05-B101-0FA135F4AF5E}|Lab2\\Lab2.fsproj|solutionrelative:lab2\\program.fs||{8A5AA6CF-46E3-4520-A70A-7393D15233E9}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A4D5BBF-5166-4D05-B101-0FA135F4AF5E}|Lab2\\Lab2.fsproj|c:\\users\\damia\\onedrive\\pulpit\\studia ii rok i semestr\\ii semestr\\laborki\\f#\\lab4\\lab4\\lab2\\lab2\\lab2.fsproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{9A4D5BBF-5166-4D05-B101-0FA135F4AF5E}|Lab2\\Lab2.fsproj|solutionrelative:lab2\\lab2.fsproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Lab2.fsproj",
+              "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\Studia II ROK I SEMESTR\\II Semestr\\Laborki\\f#\\lab4\\Lab4\\Lab2\\Lab2\\Lab2.fsproj",
+              "RelativeDocumentMoniker": "Lab2\\Lab2.fsproj",
+              "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\Studia II ROK I SEMESTR\\II Semestr\\Laborki\\f#\\lab4\\Lab4\\Lab2\\Lab2\\Lab2.fsproj",
+              "RelativeToolTip": "Lab2\\Lab2.fsproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001351|",
+              "WhenOpened": "2025-05-15T21:52:40.07Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.fs",
+              "DocumentMoniker": "C:\\Users\\damia\\OneDrive\\Pulpit\\Studia II ROK I SEMESTR\\II Semestr\\Laborki\\f#\\lab4\\Lab4\\Lab2\\Lab2\\Program.fs",
+              "RelativeDocumentMoniker": "Lab2\\Program.fs",
+              "ToolTip": "C:\\Users\\damia\\OneDrive\\Pulpit\\Studia II ROK I SEMESTR\\II Semestr\\Laborki\\f#\\lab4\\Lab4\\Lab2\\Lab2\\Program.fs",
+              "RelativeToolTip": "Lab2\\Program.fs",
+              "ViewState": "AgIAAMUAAAAAAAAAAIAwwNoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-15T18:07:12.714Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
