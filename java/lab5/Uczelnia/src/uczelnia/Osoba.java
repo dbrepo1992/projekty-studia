@@ -1,13 +1,13 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package uczelnia;
 
-/**
- *
- * @author damia
- */
 public class Osoba {
-    
+    protected String imie = "";
+    protected String nazwisko = "";
+    protected String dataUrodzenia = "";
+
+    public Osoba(String imie, String nazwisko, String dataUrodzenia) {
+        this.imie = imie;
+        this.nazwisko = nazwisko;
+        this.dataUrodzenia = dataUrodzenia;
+    }
 }
